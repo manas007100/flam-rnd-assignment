@@ -6,18 +6,14 @@ CS-CYS-4A
 Pranveer Singh Institute of Technology
 
 This is my submission for the Flam Software Engineering Intern (R&D) assignment.
-
 The task was to make a small Android project that can do real-time edge detection using OpenCV and NDK, and also create a small web viewer using TypeScript.
-
 ---
 
 ## About the Project
 
 In this project, the Android app uses the camera to capture live frames, sends them to native C++ code using JNI, and applies edge detection using OpenCV.  
 Then it renders the processed frames using OpenGL ES 2.0.
-
 The web part is a simple viewer built with TypeScript that displays a processed image and some basic frame details.
-
 ---
 
 ## Project Structure
@@ -25,7 +21,6 @@ The web part is a simple viewer built with TypeScript that displays a processed 
 app → Android app (Java/Kotlin)
 jni → Native C++ code (OpenCV + JNI)
 web → TypeScript web viewer
-
 ---
 
 ## Android Features
@@ -35,7 +30,6 @@ web → TypeScript web viewer
 - Applies Canny Edge Detection using OpenCV
 - Renders frames with OpenGL ES
 - Has a button to save a sample processed image (PNG)
-
 ---
 
 ## Web Features
@@ -43,7 +37,6 @@ web → TypeScript web viewer
 - Simple HTML + TypeScript web viewer
 - Shows a sample processed image (`sample_processed.png`)
 - Displays resolution and FPS (static data for now)
-
 ---
 
 ## How to Set Up
@@ -55,17 +48,13 @@ web → TypeScript web viewer
 3. Extract it in your project under this path:
    third_party/opencv-android/
 4. Open `app/jni/CMakeLists.txt` and make sure the path is correct:
-
 ```cmake
 set(OpenCV_DIR ${CMAKE_SOURCE_DIR}/../third_party/opencv-android/sdk/native/jni)
 Open the project in Android Studio.
-
 Connect your Android phone → click Run → allow camera permission.
-
 You’ll see the live edge detection working.
 
 Web Part
-
 Open a terminal inside the web folder.
 
 Run:
